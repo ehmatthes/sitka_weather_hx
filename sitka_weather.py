@@ -17,7 +17,7 @@ end_year = 2013
 
 # The script is running into connection issues after long runs.
 #  Need to be able to pick up where it left off.
-start_year = 1960
+start_year = 1995
 
 
 def get_url(year, month):
@@ -28,9 +28,10 @@ year = start_year
 while year <= end_year:
 
     if year == start_year:
-        month = 10
+        month = 3
     else:
         month = 1
+
     while month <= 12:
 
         # Print a timestamp, to monitor a script running overnight.
