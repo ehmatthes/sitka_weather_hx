@@ -10,14 +10,14 @@ output_file = "sitka_weather_history.csv"
 
 
 start_year = 1949
-end_year = 2013
+end_year = 2014
 
 # test data:
 #end_year = 1950
 
 # The script is running into connection issues after long runs.
 #  Need to be able to pick up where it left off.
-start_year = 1995
+start_year = 2014
 
 
 def get_url(year, month):
@@ -28,11 +28,11 @@ year = start_year
 while year <= end_year:
 
     if year == start_year:
-        month = 3
+        month = 1
     else:
         month = 1
 
-    while month <= 12:
+    while month <= 5:
 
         # Print a timestamp, to monitor a script running overnight.
         # For monitoring progress, print current month, year.
