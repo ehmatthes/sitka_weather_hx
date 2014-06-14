@@ -3,6 +3,7 @@ from time import strftime
 
 # Define output file, and make sure it starts out blank.
 output_file = "sitka_weather_history.csv"
+output_file = "sitka_weather_history_2014.csv"
 
 # Comment this out to pick up where it left off:
 #with open(output_file, 'w') as myfile:
@@ -10,14 +11,14 @@ output_file = "sitka_weather_history.csv"
 
 
 start_year = 1949
-end_year = 2014
+end_year = 2013
 
 # test data:
 #end_year = 1950
 
 # The script is running into connection issues after long runs.
 #  Need to be able to pick up where it left off.
-start_year = 2014
+start_year = 2013
 
 
 def get_url(year, month):
@@ -32,7 +33,7 @@ while year <= end_year:
     else:
         month = 1
 
-    while month <= 5:
+    while month <= 12:
 
         # Print a timestamp, to monitor a script running overnight.
         # For monitoring progress, print current month, year.
